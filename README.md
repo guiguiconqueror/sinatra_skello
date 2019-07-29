@@ -31,3 +31,10 @@ This is a test of your front-end, back-end capabilities, as well as your creativ
 Overall, we're just looking for you to surprise us!
 
 *Any questions ? [samy@skello.io](mailto:samy@skello.io)*
+
+
+**Run local**
+
+- ```bundle install```
+- ```rake db:create && rake db:migrate && rake db:seed ```
+- ```rackup```

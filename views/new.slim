@@ -1,0 +1,18 @@
+body.sidebar-collapse
+  .wrapper
+    .section.section-form
+      .container
+        form action="/posts" method="post"
+          .form-group
+            label for="title"  Titre
+            input#title.form-control aria-describedby="title" placeholder=("Enter un titre") name="post[title]" type="text" /
+          .form-group
+            label for="content"  Contenu
+            textarea#content.form-control rows="5" name="post[content]"
+          .form-group
+            label for="image"  Image
+            input#image.form-control aria-describedby="title" placeholder=("Enter une url") name="post[photo]" type="text" /
+          button.btn.btn-primary type="submit"  Créer
+
+javascript:
+  document.getElementById("navbar").classList.remove("navbar-transparent");

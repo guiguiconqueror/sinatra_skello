@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: skello_sinatra
+  username: <%= ENV["GD_API_PG_USERNAME"] %>
+  password: <%= ENV["GD_API_PG_PASSWORD"] %>
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

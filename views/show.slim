@@ -1,0 +1,28 @@
+body.profile-page.sidebar-collapse
+  .wrapper
+    .page-header.clear-filter.page-header-small filter-color="orange"
+      .page-header-image data-parallax="true" style="background-image:url(#{@post.photo.nil? ? "https://cdn-images-1.medium.com/fit/c/100/100/1*Qi8fGnUtf21nyC3DdN459w.png" : @post.photo})"
+      .container
+        .photo-container
+          img alt="" src="#{@post.photo.nil? ? "https://cdn-images-1.medium.com/fit/c/100/100/1*Qi8fGnUtf21nyC3DdN459w.png" : @post.photo}" /
+        h3.title
+          = @post.title
+        .content
+          .social-description
+            h2
+              = @post.rating
+            p Notes
+    .section
+      .container
+        h3.title
+          = @post.title
+        h5.description
+          = @post.content
+        h5 Commentaires
+        ul
+          - @comments.each do |comment|
+            li
+              | #{comment.body}
+        a href="/post/#{@post.id}/delete"
+          button.btn.btn-danger type="button"  Supprimer le post
+

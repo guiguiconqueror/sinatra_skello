@@ -1,2 +1,32 @@
-h1
-  | Hello Skello
+body.landing-page.sidebar-collapse
+  .wrapper
+    .page-header.page-header-small
+      .page-header-image data-parallax="true" style=("background-image: url('/img/skello_team.jpg');")
+      .content-center
+        .container
+          h1.title Skello Blog
+          .text-center
+            a.btn.btn-primary.btn-icon.btn-round href="https://www.facebook.com/skello.io/"
+              i.fab.fa-facebook-square
+            a.btn.btn-primary.btn-icon.btn-round href="https://twitter.com/skelloapp?lang=fr"
+              i.fab.fa-twitter
+            a.btn.btn-primary.btn-icon.btn-round href="https://www.instagram.com/skelloapp/?hl=fr"
+              i.fab.fa-instagram
+    .section.section-team.text-center
+      .container
+        h2.title Les news
+        .team
+          .row
+            - @posts.each do |post|
+              .col-md-4
+                .team-player
+                  a href="/posts/#{post.id}"
+                    img.rounded-circle.img-fluid.img-raised alt=("Thumbnail Image") src="#{post.photo.nil? ? "https://cdn-images-1.medium.com/fit/c/100/100/1*Qi8fGnUtf21nyC3DdN459w.png" : post.photo}" /
+                  h4.title
+                    = post.title
+                  p.category.text-primary
+                    | #{post.rating} Notes
+                  a href="/posts/#{post.id}/likethepost"
+                    i.now-ui-icons.ui-2_like
+                  p.description
+                    = post.content
