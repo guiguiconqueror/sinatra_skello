@@ -1,5 +1,6 @@
 require "sinatra"
 require "sinatra/reloader" if development?
+require "slim"
 require_relative "database"
 
 # get "/" do
@@ -7,5 +8,5 @@ require_relative "database"
 # end
 
 get '/' do
-  'Hello World !'
+  slim :index
 end
