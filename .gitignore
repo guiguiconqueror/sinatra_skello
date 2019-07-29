@@ -4,7 +4,6 @@
 *.rbc
 *.sass-cache
 /pkg
-/Gemfile.lock
 /coverage
 .yardoc
 /doc
