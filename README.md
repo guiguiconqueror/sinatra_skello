@@ -38,3 +38,7 @@ Overall, we're just looking for you to surprise us!
 - ```bundle install```
 - ```rake db:create && rake db:migrate && rake db:seed ```
 - ```rackup```
+
+**Demo**
+
+app dispo [ici](https://peaceful-beyond-13708.herokuapp.com/)
